@@ -32,7 +32,7 @@ An Option must have a label and a value. It is connected to a Question. . It mus
 
 
 The options controller has no `show` action, it is the show of the questions which displays the question and its options.
-Creating an option is always done in the context of an option.
+Creating an option is always done in the context of a question.
 Manipulating a persisted option is done directly.
 
 
