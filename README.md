@@ -8,18 +8,18 @@ Steps :
 
 * CRUD Questions, Options
 * Add User and Authentication
-* User start a participation and answer questions
+* User starts a participation and answers questions
 * Questions and Options are available in 2 languages
 * Upon registration, email unicity is checked using AJAX
-* Questions are organized in quizzes
-
-
 * Questions can have pictures,
+
+
+* Questions are organized in quizzes
 * Google analytics is used to learn what people choose. Hotjar is used for heatmaps
 * Activity Feed
 
 
-## CRUD Questions, Options
+## CRUD Questions, Options (1d)
 
 What is a resource ? Something you can locate using a URL and manipulate using one of the four verbs : GET/POST/PUT-PATCH/DELETE 
 In Rails terms, a resourc is a set of routes and a controller having actions matching those routes.
@@ -47,17 +47,70 @@ Manipulating a persisted option is done directly.
 
 - Explain REST simply
 - Slim
-- No ActiveAdmin
-- No Coffee, No (S)CSS
 
 
-## Add User and Authentication
 
-- Devise / Gemfile
+## Add User and Authentication (1d)
+
+Use devise for authentication. Work on a feature branch.
+
+Get the documentation open : https://github.com/plataformatec/devise
+
+Install Devise according to Doc
+
+Check the generated files, do you understand them ? 
+Probably not completely. 
+Ask about what you do not understand. 
+Hint : if you cannot explain what are salt and pepper you have not asked enough :)
 
 
-- create feature branch
-- No ActiveAdmin
-- Slim
-- No Coffee, No (S)CSS
-- merge feature branch
+Add devise controller customization using a concern
+
+Add a link into the navbar to the sign_in page when no current user and a logout button when there is a current_user
+Protect the Question and Option Controllers against unauthenticated access.
+
+
+- Gemfile
+- Devise
+- Concern
+- Feature branch
+
+## User starts a participation and answers questions (2d)
+
+Create Participation and Answer resources.
+Those resources do not have all the actions, they are not simple CRUD.
+
+Allow an authenticated user to start a participation and then add answers to that participation.
+
+When a user click next without having chosen an option, redisplay form with error message
+
+When the user has finished, redirect to home with a thanks message.
+
+Use Draper to decorate an answer record and it participation when displaying the form to answer a question.
+
+The participation decorator must be able to tell how many questions have been answered and how many are left. 
+Those two methods  must have unit specs
+
+
+- REST
+- Validation
+- Flash
+- Simpleform
+- Draper
+- Rspec
+
+
+## Questions and Options are available in 2 languages 
+
+Add a role to users. "participant" or "admin"
+Only admin can CRUD questions and options.
+The project must now be available in french and english. English is the default. 
+Scope all routes under `/fr` or `/en`, use the available concern to get the locale from the request
+Add a language switcher
+Scope admin panel under `/admin`
+
+
+
+- I18n
+- Pundit
+- routes segmentation
