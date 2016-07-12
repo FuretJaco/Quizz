@@ -1,0 +1,13 @@
+.datepicker td span.active,
+.datepicker td.active.day,
+.datepicker td.active.year
+{
+  background: $primary-color;
+  color: white;
+}
+.datepicker.dropdown-menu
+{
+  border: none;
+  padding: 0;
+  @extend .shadow;
+}

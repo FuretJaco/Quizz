@@ -1,0 +1,30 @@
+#top-menu.top-menu
+  .title-bar
+    .title-bar-left
+      ul.menu
+        li.title-bar-title
+          == link_to root_path do
+            | Home
+
+        /- if current_user.present? && current_user.admin?
+          li
+            = link_to t('nav.admin'), admin_root_path
+
+    .title-bar-right
+      ul.dropdown.menu data-dropdown-menu=""
+        li.uppercase.language-wrapper
+          /a.language-switcher
+            span class=("flag flag-country-#{locale.to_s}")
+            span.lang = locale
+          /ul.menu
+            - for locale in other_available_locales
+              li = link_to locale: locale, class: "flag-#{locale.to_s}" do
+                span class=("flag flag-country-#{locale.to_s}")
+                span.language-dropdown = locale.to_s
+        /- if current_user.present?
+          li
+            = link_to destroy_user_session_path, method: :delete, 'data-purpose': 'logout_button' do
+              i.fa.fa-sign-out
+        /- else
+          li
+            = link_to t(".login"), new_user_session_path, 'data-purpose': 'login_link'

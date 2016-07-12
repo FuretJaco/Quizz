@@ -1,0 +1,147 @@
+.contract-request{
+
+  .hidden{
+    display: none;
+  }
+
+  .card{
+    background: white;
+    position: relative;
+    margin-bottom: 2em;
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+    padding: 1.5em 1em 1em 1em;
+
+    .checkbox-wrapper{
+      color: #6a7485;
+
+      label{
+        color: #6a7485;
+      }
+      .selected{
+
+        label{
+          color: black;
+        }
+      }
+    }
+  }
+
+  .input-date-smaller{
+    margin-top: 0.2em ;
+    margin-right: 2%;
+    margin-left: 2%;
+    width: 29%;
+  }
+
+
+  .selected{
+    color: black;
+  }
+
+  .total-price{
+    .columns{
+      margin-top: 1em;
+      padding-top: 0.6em;
+      border-top: solid 1px #6a7485;
+      font-weight: 600;
+    }
+  }
+
+  .content-left {
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    &.small-padding {
+      margin-top: 0.8em;
+      margin-bottom: 0.8em;
+    }
+    .columned-features {
+      li {
+        font-size: 0.9em;
+
+        i {
+          padding-right: 1em;
+
+          &.green {
+            color: rgb(147, 199, 63);
+          }
+        }
+      }
+    }
+  }
+
+  .summary-options{
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+
+  }
+
+  .with-divider{
+    font-size: 12px;
+    font-weight: bold;
+    &.dbottom{
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.8em;
+    }
+    &.dtop{
+      border-top: 1px solid #ccc;
+      padding-top: 0.8em;
+    }
+    &.dbig-bottom {
+      border-bottom: 3px solid #ccc;
+      padding-bottom: 0.8em;
+
+    }
+  }
+
+  .row{
+    &.total{
+      margin-top: 1.5em;
+      font-weight: 600;
+    }
+
+  }
+
+  .back-button{
+    background: transparent;
+    border: 1px solid rgb(199,204,210);
+    color: rgb(102,118,127);
+
+    &:hover{
+      background: rgb(199,204,210);
+    }
+  }
+
+  .no-option{
+    font-size: 0.9em;
+    color: rgba(106, 116, 133, 0.5);
+  }
+
+}
+.contract-request-main-title
+{
+  font-size: pxtorem(24px);
+  padding-top: pxtorem(40px);
+  padding-bottom: pxtorem(20px);
+}
+.contract-request-sub-title
+{
+  font-size: pxtorem(14px);
+  font-weight: bold;
+}
+.option-tooltip
+{
+  margin-left: pxtorem(15px);
+  cursor: pointer;
+}
+.cliend_card-title,
+.cliend_card
+{
+  font-size: 14px;
+}
+.iban_calculator
+{
+  margin-top: pxtorem(30px);
+  display: block;
+}

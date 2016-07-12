@@ -1,0 +1,140 @@
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.main-form
+{
+  box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.10);
+  input[type="submit"]
+  {
+    height: 100%;
+    margin: 0;
+  }
+  .columns
+  {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .main-form-submit
+  {
+    height: 80px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .columns:not(:last-child)
+  {
+    border-right: 1px solid #E1E5E8;
+  }
+  .input-group-field
+  {
+    height: pxtorem(39px);
+  }
+}
+.main-form-input
+{
+  background: #F7F8FA;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  label
+  {
+    color: $primary-color;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .input-group, input[type]
+  {
+    margin: 0;
+  }
+  input[type]
+  {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+  }
+  .input-group-label
+  {
+    background: transparent;
+    border: none;
+    color: $primary-color;
+  }
+}
+
+label
+{
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #7B8C94;
+  input[type="radio"]
+  {
+    margin-right: pxtorem(10px);
+  }
+}
+input[type]
+{
+  box-shadow: none;
+  border-color: #E4E6EC;
+  font-size: pxtorem(14px);
+  margin-bottom: pxtorem(15px);
+  &:focus
+  {
+    box-shadow: none;
+    border-color: #3776B3;
+  }
+}
+select
+{
+  background-image: asset_url("forms/arrow-down.svg");
+  background-size: 13px 9px;
+  margin-bottom: pxtorem(5px);
+}
+[data-purpose="policy_start_date_fields_wrapper"]
+{
+  margin-bottom: pxtorem(10px);
+}
+input[type="checkbox"]
+{
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #808080;
+  width: 15px;
+  height: 15px;
+  &:checked
+  {
+    border-color: $primary-color;
+    background-color: $primary-color;
+    background-image: asset_url("forms/checkbox.svg");
+    background-size: 12px;
+    background-position: 1px;
+    background-repeat: no-repeat;
+  }
+}
+.error{
+  input[type],
+  select,
+  textarea
+  {
+    margin-bottom: pxtorem(5px);
+    + .error
+    {
+      margin-bottom: 5px;
+    }
+    &.columns + .error,
+    &.column + .error
+    {
+      padding: 0 pxtorem(12px);
+    }
+  }
+}
+
+.input-informations
+{
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  text-decoration: none;
+  text-align: center;
+}

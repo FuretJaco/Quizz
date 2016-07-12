@@ -1,0 +1,17 @@
+.list-inline
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li
+  {
+    float: left;
+    margin-right: 10px;
+  }
+}
+.list-inline-right li
+{
+  float: right;
+  margin-right: 0;
+  margin-left: 10px;
+}

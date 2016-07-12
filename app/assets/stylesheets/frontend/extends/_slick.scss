@@ -1,0 +1,8 @@
+.slick-dots
+{
+  margin:0;
+}
+.slick-dots li.slick-active button:before
+{
+  color: $primary-color;
+}

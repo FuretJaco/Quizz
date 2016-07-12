@@ -1,0 +1,16 @@
+.hero{
+  .lead_container{
+    height: 500px;
+    padding-top: 100px;
+    background: asset_url('backgrounds/hero_homepage') center bottom no-repeat #fff;
+    background-size: contain;
+    .lead{
+      text-align: center;
+      font-size: 36px;
+    }
+  }
+  .newsletter-title{
+    font-size: 24px;
+    margin: 40px 0;
+  }
+}

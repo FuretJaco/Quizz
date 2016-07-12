@@ -1,0 +1,57 @@
+.page_content{
+  padding: 50px 0;
+  background-color: white;
+  h3 {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .person-picture{
+    padding-right: 40px;
+  }
+  .person-picture, .person-description{
+    vertical-align: middle;
+  }
+  .person-name{
+    text-transform: uppercase;
+    font-weight: 300;
+    &:first-child{
+      padding-top: 0;
+    }
+  }
+  .partners-logo{
+    border:none;
+    box-shadow: none;
+    padding: 10px;
+  }
+}
+.licenses{
+  h3:first-child{
+    padding-top: 0;
+  }
+  .licenses-section{
+    padding-bottom: 40px;
+  }
+}
+
+.static-page-menu{
+  .menu-section-title{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-decoration: underline;
+  }
+  .menu-item{
+    font-size: 1rem;
+    a{
+      color: $primary-color;
+    }
+  }
+}
+
+.faq{
+  .accordion-title{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+}

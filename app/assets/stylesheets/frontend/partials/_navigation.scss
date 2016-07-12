@@ -1,0 +1,83 @@
+.is-dropdown-submenu-parent.is-down-arrow > a.language-switcher
+{
+  &::after
+  {
+    content: none;
+  }
+  .lang
+  {
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 4px;
+    display: inline-block;
+  }
+}
+.menu-toggler
+{
+  position: relative;
+  width: 20px;
+  height: 10px;
+  display: inline-block;
+  span:nth-child(1),
+  span:nth-child(2),
+  span:nth-child(3)
+  {
+    content: "";
+    left: 0;
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    border-radius: 5px;
+    background: $primary-color;
+  }
+  span:nth-child(1)
+  {
+    top: 0;
+    width: 8px;
+  }
+  span:nth-child(2)
+  {
+    top: 4px;
+  }
+  span:nth-child(3)
+  {
+    width: 14px;
+    top: 8px;
+  }
+}
+.menu .menu-switcher .menu-toggler + span
+{
+  display: inline-block;
+  vertical-align: middle;
+}
+.is-dropdown-submenu-parent.is-down-arrow > a.menu-switcher
+{
+  &::after
+  {
+    content: none;
+  }
+}
+.language-wrapper
+{
+  padding-right: 20px;
+}
+.language-switcher
+{
+  border: 1px solid #eff0f3;
+  border-radius: 20px;
+  .lang
+  {
+    margin-left: pxtorem(10px);
+    font-size: pxtorem(14px);
+    margin-top: pxtorem(4px);
+    display: inline-block;
+  }
+}
+.language-switcher + .menu
+{
+  display: none;
+}
+.language-switcher + .menu.js-dropdown-active
+{
+  display: block;
+}

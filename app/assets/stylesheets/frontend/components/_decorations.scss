@@ -1,0 +1,57 @@
+.up-decoration
+{
+  position: relative;
+  padding-top: 35px;
+  &::before
+  {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 2px;
+    height: 40px;
+    background: #F1F5F8;
+    margin-left: -1px;
+  }
+  &::after
+  {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid $primary-color;
+    margin-left: -10px;
+  }
+}
+.lead-decoration
+{
+  position: relative;
+  padding-bottom: 20px;
+  &::after
+  {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 40px;
+    margin-left: -20px;
+    height: 3px;
+    background: $primary-color;
+  }
+}
+.has-decoration{
+  padding-top: 40px;
+}
+.icon-left{
+  i {
+    padding-right: 10px;
+  }
+}
+.icon-right{
+  i {
+    padding-left: 10px;
+  }
+}

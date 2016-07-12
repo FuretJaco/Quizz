@@ -1,0 +1,20 @@
+.tabs-content
+{
+  border: none;
+  background: transparent;
+}
+.tabs
+{
+  border: none;
+}
+.tabs-title > a:focus, .tabs-title > a[aria-selected='false']
+{
+  color: #576477;
+  background: transparent;
+  font-weight: bold;
+}
+.tabs-title > a:focus, .tabs-title > a[aria-selected='true']
+{
+  color: $primary-color;
+  background: white;
+}

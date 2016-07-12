@@ -1,0 +1,75 @@
+// = SET OF SASS FUNCTIONS AND HELPERS USED FOR COMMON CSS OPERATIONS
+// ====================================================================
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@function get-factor($value, $base) {
+  @return strip-units($value)/strip-units($base);
+}
+
+@function pxtorem($value) {
+  @return #{strip-units($value)/strip-units($rem-base)}rem;
+}
+
+@function pxtoem($value, $base) {
+  @return #{strip-units($value)/strip-units($base)}em;
+}
+
+@function emtopx($value, $base) {
+  @return #{strip-units($value) * strip-units($base)}px;
+}
+
+@function list-contains($haystack, $needle) {
+  @each $value in $haystack {
+    @if ($needle == $value) {
+      @return true;
+    }
+  }
+  @return false;
+}
+
+@function count-decimals($float) {
+  $count: 0;
+  $f: $float;
+  @while is-int($f) != true {
+    $count: $count + 1;
+    $f: $f * 10;
+  }
+  @return $count;
+}
+
+@function is-int($value) {
+  @if type-of($value) == "number" {
+    @return round($value) == $value;
+  } @else {
+    @return false;
+  }
+}
+
+@function add-decimals($value1, $value2) {
+  $mult: 1;
+  $i: count-decimals($value1);
+  $j: count-decimals($value2);
+
+  @if ($i > $j) {
+    $count: $i;
+  } @else {
+    $count: $j;
+  }
+
+  @while $count > 0 {
+    $mult: ($mult * 10);
+    $count: $count - 1;
+  }
+
+  $res: ($value1 * $mult) + ($value2 * $mult);
+  @return ($res/$mult);
+}
+
+@function get-btn-vpadding($height-factor) {
+  $i: count-decimals($height-factor);
+  $factor: $height-factor * $i;
+  @return ($factor * $i)/(2 * $i);
+}

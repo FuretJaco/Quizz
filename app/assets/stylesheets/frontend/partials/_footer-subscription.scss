@@ -1,0 +1,20 @@
+.footer-subscription
+{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  max-width: 340px;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.footer-subscription .title
+{
+  font-size: 18px;
+}
+.footer-subscription ul
+{
+  margin-bottom: 0;
+  list-style-type: decimal;
+  font-size: 14px;
+}

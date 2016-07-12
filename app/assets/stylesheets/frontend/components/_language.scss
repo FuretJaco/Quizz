@@ -1,0 +1,40 @@
+.language
+{
+  .fa
+  {
+    margin-left: 10px;
+  }
+}
+.flag
+{
+  width: 21px;
+  height: 15px;
+  overflow: hidden;
+  background: asset_url("language/flags") no-repeat center center;
+  display: inline-block;
+}
+.language-dropdown
+{
+  vertical-align: initial;
+  display: inline-block;
+  float: right;
+  margin-top: 3px;
+  margin-left: 6px;
+  font-size: 14px;
+}
+.flag-country-fr
+{
+  background-position: -329px -80px;
+}
+.flag-country-nl
+{
+  background-position: -329px -180px;
+}
+.flag-country-en
+{
+  background-position: -81px -105px;
+}
+.flag-country-de
+{
+  background-position: -81px -80px;
+}

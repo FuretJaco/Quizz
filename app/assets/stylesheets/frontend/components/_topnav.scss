@@ -1,0 +1,37 @@
+.top-menu {
+  border-top: 1px solid rgb(103,103,103);
+  height: auto;
+  background: white;
+  .title-bar {
+    background: white;
+    border-top: 4px solid rgb(145,152,162);
+    width: 100%;
+
+    a {
+      color: rgb(78, 89, 111) !important;
+    }
+
+    .espace_client {
+      border: 1px solid #eff0f3;
+      padding: 0.5em 0.5em 0.5em 2em;
+    }
+  }
+  :after{
+
+    border-top: 4px solid rgb(145,152,162);
+  }
+}
+
+
+.body-container{
+  background-color: #f5f6f9 !important;
+}
+
+@media #{$xlarge-up}
+{
+  .top-menu .title-bar
+  {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}

@@ -1,0 +1,20 @@
+.dropdown.menu:not(.vertical) .language-switcher + .is-dropdown-submenu.first-sub
+{
+  min-width: 80px;
+  left: 0;
+  right: auto;
+  border: none;
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+}
+.fixed-navigation {
+  padding-top: 67px;
+  .top-menu
+  {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}

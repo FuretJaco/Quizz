@@ -1,0 +1,22 @@
+.callout.success,
+.callout.alert
+{
+  color: white;
+  border: none;
+  margin: 0;
+  font-weight: bold;
+}
+.callout.success
+{
+  background-color: #40d47e;
+}
+.callout.alert
+{
+  background-color: #e74c3c;
+}
+.callout .close-button
+{
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+}

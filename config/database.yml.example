@@ -1,0 +1,19 @@
+defaults_pg: &defaults_pg
+  adapter: postgresql
+  encoding: unicode
+  database:
+  pool: 5
+  username:
+  password:
+
+test:
+  <<: *defaults_pg
+  database: quizzighted_test
+
+development:
+  <<: *defaults_pg
+  database: quizzighted_development
+
+production:
+  <<: *defaults_pg
+  database: quizzighted_development # if you ever need to emulate production config.

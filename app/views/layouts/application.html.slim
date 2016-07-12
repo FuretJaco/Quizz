@@ -1,0 +1,24 @@
+doctype html
+html lang=I18n.locale
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+    title == content_for?(:title) ? yield(:title) : 'Quizzlighted'
+
+
+
+    = csrf_meta_tag
+
+  body
+    .body-container.fixed-navigation
+
+      = render 'layouts/navigation'
+
+      = render 'layouts/messages'
+
+      == yield
+
+
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'

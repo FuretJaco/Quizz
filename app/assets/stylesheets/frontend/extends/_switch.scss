@@ -1,0 +1,16 @@
+.switch-paddle
+{
+  border-radius: 20px;
+}
+.switch-paddle::after
+{
+  border-radius: 50%;
+}
+.switch-active
+{
+  left: 12%;
+}
+.switch-inactive
+{
+  right: 13%;
+}

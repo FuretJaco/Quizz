@@ -1,0 +1,326 @@
+.detailed-search-form{
+
+  .spaced{
+    margin-bottom: 3em;
+  }
+  .hidden{
+    display: none;
+  }
+
+  .progress-meter{
+    background: rgb(53,118,222);
+  }
+
+  .search-container{
+    padding: 1em 2em;
+    padding-top: 3em;
+    background: white;
+    margin-bottom: 0;
+    height: calc( 100vh - 66px );
+  }
+
+  .button{
+    background: rgb(53,118,222);
+  }
+
+  .tabs{
+    //border-radius: 15px;
+    border: none;
+
+    .tabs-title {
+      width: 55%;
+      text-align: center;
+      border: 1px solid #EAEFF5;
+      border-radius: 20px;
+      a {
+        padding: 0.50rem 1.5rem;
+        color: rgb(53,118,222);
+        font-size: 1em;
+      }
+      &.is-active {
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        a {
+          background: rgb(53,118,222);
+          color: white;
+        }
+      }
+      &:first-child
+      {
+        margin-right: -5%;
+      }
+      &:last-child
+      {
+        margin-left: -5%;
+      }
+    }
+  }
+  .tabs-panel
+  {
+    padding: 0;
+  }
+
+  .tabs-content{
+    margin-top: 1em;
+    border: none;
+  }
+}
+
+.search-results{
+  height:calc( 100vh - 66px );
+  ul{
+    list-style-type: none;
+
+
+    .offer-card{
+      background: white;
+      position: relative;
+      margin-bottom: 4em;
+      @extend .shadow;
+
+      &:first-child{
+        margin-top: 50px;
+      }
+
+      .title{
+        position: absolute;
+        margin: 0;
+        top: -.9em;
+        left: 5%;
+        height: 1.7em;
+        border-radius: 1em;
+        padding: 0.4em 1em;
+        color: white;
+        font-size: 16px;
+        line-height: 19px;
+        background: rgb(53,118,222);
+      }
+
+      .title-informations
+      {
+        margin-left: 30px;
+        color: white;
+        border: 1px solid white;
+        border-radius: 50%;
+        font-size: 12px;
+        width: 16px;
+        height: 16px;
+        text-align: center;
+        line-height: 16px;
+        cursor: pointer;
+      }
+
+      .content-left{
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
+        .features-list {
+          columns: 2;
+          -webkit-columns: 2;
+          -moz-columns: 2;
+          font-size: pxtorem(12px);
+          li{
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid-column;
+            display:table;
+            span
+            {
+              display: table-cell;
+            }
+          }
+        }
+
+        .quality-index{
+          font-size: 1.3em;
+          font-weight: 200;
+          text-align: center;
+          color: black;
+        }
+        .quality-label{
+          font-size: 0.9em;
+          font-weight: 100em;
+          text-align: center;
+        }
+
+      }
+
+      .content-right{
+        padding-top: 1.5em;
+      }
+      .price-container
+      {
+        border-left: 1px solid #E6EBEB;
+        position: relative;
+        &::before
+        {
+          position: absolute;
+          content: "";
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 14px 13.9px 14px 0;
+          border-color: transparent white transparent transparent;
+          z-index: 2;
+          top: 50%;
+          left: -13px;
+          transform: translateY(-50%);
+        }
+        &::after
+        {
+          position: absolute;
+          content: "";
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 17px 16.3px 17px 0;
+          top: 50%;
+          left: -16px;
+          border-color: transparent #E6EBEB transparent transparent;
+          transform: translateY(-50%);
+        }
+      }
+      .price{
+        font-size: pxtorem(32px);
+        font-weight: 200;
+        text-align: center;
+        color: rgb(90,87,108);
+        sup
+        {
+          font-size: 12px;
+        }
+      }
+      .price-label{
+        font-size: 0.9em;
+        font-weight: 200;
+        text-align: center;
+      }
+
+      .button.expanded{
+        margin: auto;
+        margin-top: 10px;
+        width: 90%;
+        border-radius: 5px;
+        background: rgb(53,118,222);
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+.reveal.insurance
+{
+  width: 960px;
+  padding: 0;
+}
+.best-insurance-container
+{
+  position: relative;
+  min-height: 480px;
+}
+.best-insurance
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  width: 80%;
+}
+.background-insurance
+{
+  background-image: asset_url("modals/background-insurance.jpeg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  &::before
+  {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(34, 43, 49, .6);
+    position: absolute;
+  }
+}
+.best-insurance-list
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+  li
+  {
+    line-height: 30px;
+  }
+  li::before
+  {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f054";
+    color: $primary-color;
+  }
+}
+.best-insurance-title
+{
+  font-size: pxtorem(20px);
+  color: #212121;
+}
+.best-insurance-description
+{
+  font-size: pxtorem(14px);
+  margin-bottom: 30px;
+  color: #212121;
+}
+.best-insurance-informations
+{
+  padding: pxtorem(20px);
+  margin-top: 40px;
+}
+.play-button
+{
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto;
+  &::before
+  {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 10px;
+    border-color: transparent transparent transparent black;
+    margin-top: -7px;
+  }
+}
+.features::before
+{
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f00c";
+  color: #2ecc71;
+}
+
+.nested-drivers
+{
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 10px 0 0;
+  margin-bottom: 15px;
+}

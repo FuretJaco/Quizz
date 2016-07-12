@@ -1,0 +1,23 @@
+.session{
+
+  .title{
+    margin-top: 100px;
+  }
+  .login_form_container{
+    margin-top: 20px;
+    background: white;
+    min-height: 50%;
+    padding: 1em 2em;
+  }
+
+  .error-container{
+    color: red;
+    h2{
+      font-size: 0.8em;
+      font-weight: 600;
+    }
+    ul{
+      font-size: 0.8em;
+    }
+  }
+}
