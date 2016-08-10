@@ -1,0 +1,19 @@
+h4 Edit your question
+div class="row"
+  div class="small-6 large-centered columns"
+		= form_for :question, url: question_path, method: :put do |f| 
+			p
+				label My Image 
+				= f.file_field :image
+				= f.hidden_field :image_cache
+			p
+				= f.label :title 
+				= f.text_field :title 
+			p
+				= f.label :body 
+				= f.text_field :body
+				h5 Options
+				= f.fields_for :options do |opt|
+					= render 'options_fields', f: opt
+			p 
+				= f.submit		

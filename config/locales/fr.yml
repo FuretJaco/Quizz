@@ -1,0 +1,67 @@
+fr:
+  layouts:
+    navigation:
+      home: "Accueil"
+      my_session: "Ma session"
+      log_out: "Déconnexion"
+      log_in: "Connexion"
+      sign_up: "S'enregistrer"
+  views: 
+    show: "voir"
+    edit: "editer"
+    destroy: "supprimer"
+    are_you_sure: "Etes vous certain?"
+    back: "Retour"
+  answers:
+    new:
+      Lets_start: "C'est parti !"
+  questions:
+    index:
+      title: "Quizzlighted en français"
+      start_quizz: "Commencez le quizz"
+      number_of_questions: "Nombre de questions"
+      question: "Soumettre un nouveau quizz"
+      edit: "Editer"
+      delete: "Supprimer"
+    new:
+     Submit_your_question: "Soumettre une nouvelle question"
+     hello_flash: "Nouveau quizz soumis avec succès"
+    show:
+     edit: " Editer "
+     delete: " | Supprimer"
+     index: " | Retour à la page d'accueil"
+    options_show:
+     details_about_this_option: "Détails concernant les options"
+  devise:
+    registrations:
+      signed_up: "Vous êtes maintenant enregistré(e)"
+    sessions:
+      user:
+        signed_in: "Vous êtes maintenant connecté(e)"
+        signed_out: "Vous êtes maintenant déconnecté(e)"
+      new:
+        log_in: "Connexion"
+    shared:
+      links:
+        log_in: "Se connecter"
+        sign_up: "S'enregistrer"
+        forgot_your_password: "Mot de passe oublié? "
+  activerecord:
+    models: 
+      question: Question
+      answer: Reponse
+      devise:
+    attributes: 
+      question:
+        title: "Titre"
+        body: "Contenu"
+        image: "Choisissez une image"
+      option:
+        label: "Etiquette"
+        value: "Valeur"
+      devise:
+        log_in: "Connexion"
+        password: "Mot de passe"
+        remember_me: "Se souvenir de moi"
+
+

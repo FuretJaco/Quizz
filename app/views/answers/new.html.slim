@@ -1,0 +1,11 @@
+h5 = t('.Lets_start') 
+//p = @answer.errors.full_messages
+div class="row"
+  div class="small-6 large-centered columns"
+		= simple_form_for([@participation, @question, @answer]) do |f|
+			h4 = @question.title
+			img src="#{ @question.image.url }" 
+			h6 = @question.body
+			// f.association va permettre de récup mon model option et ce en récuperant l'id
+			= f.association :option,  collection: @question.options, label_method: :value, value_method: :id, as: :radio_buttons, label: false
+			= f.submit 'Next Quizz ... '

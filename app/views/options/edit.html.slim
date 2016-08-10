@@ -1,0 +1,15 @@
+h3 Edit your option 
+
+
+= form_for @option, url: option_path(@option), method: :put do |o| 
+	p
+		= o.label :label
+		= o.text_field  :label
+	p
+		= o.label :value
+		= o.text_field :value
+	p
+		= o.collection_select(:question_id, Question.all, :id, :title)
+		<!-- permet de récup les questions -->
+	p
+		= o.submit 

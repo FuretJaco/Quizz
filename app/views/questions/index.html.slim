@@ -1,0 +1,28 @@
+div class="row"
+	div class="small-6 small-centered columns"
+		h1 class="general_title"
+			= t('.title')
+
+div class="row"
+	div class="small-3 small-centered columns"
+		h5 #{ t('.number_of_questions') } #{ @questions.count }
+
+div class="row"
+	- if current_user && current_user.admin?
+		div class="small-3 small-centered columns"
+			= link_to t('.question'), new_question_path
+	- else
+		div class="small-3 medium-6 large-12 small-centered columns" 
+			= button_to t(".start_quizz"),  participations_path, :method => :post, class: "button expanded"
+ul
+	- if current_user && current_user.admin? 
+		- @questions.each do |question|
+			li 
+				= link_to question.title, question_path(question)
+						//ol
+							//= link_to t(".Edit "), edit_question_path(question) 
+							//= link_to t(".Delete "), question_path(question), :method => :delete, data: { confirm: 'Are you sure?' }  
+
+
+
+

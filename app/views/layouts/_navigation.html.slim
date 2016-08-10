@@ -2,12 +2,33 @@
   .title-bar
     .title-bar-left
       ul.menu
-        li.title-bar-title
-          == link_to root_path do
-            | Home
+        li.title-bar-title 
+          = link_to root_path do
+            = t(".home")
+        li.title-bar-title 
+          - if user_signed_in? 
+              li
+                = link_to user_session_path do
+                  = t(".my_session") 
+              li
+                = link_to destroy_user_session_path, :method => :delete do 
+                  = t(".log_out")
+          - else 
+            li 
+              = link_to new_user_registration_path do
+                = t(".sign_up")
+            li 
+              = link_to new_user_session_path do
+                = t(".log_in") 
 
 
     .title-bar-right
       ul.dropdown.menu data-dropdown-menu=""
         li
-          a href="#" Demo Navbar Link
+          = link_to " English ", locale: "en"
+        li
+          = link_to " Français ", locale: "fr"
+
+
+
+

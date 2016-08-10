@@ -1,0 +1,10 @@
+h3 List of differents options 
+
+= link_to "Purpose an option", new_option_path
+ul
+	- @options.each do |option| 
+			li
+				= link_to option.label, option_path(option)
+				= option.value 
+				= link_to "Edit", edit_option_path(option)
+				= link_to "Delete", option_path(option), :method => :delete, data: { confirm: 'Are you sure?' }  

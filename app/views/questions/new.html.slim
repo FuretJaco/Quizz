@@ -1,0 +1,32 @@
+div class="row"
+  div class="small-6 large-centered columns"
+		h3 = t(".Submit_your_question")
+		p = flash[:notice]
+div class="row"
+  div class="small-6 large-centered columns"
+		= form_for @question, url: questions_path do |f| 
+			- if @question.errors.any? 
+				h2 = I18n.t('errors.template.header', model: Question.model_name.human)
+				ul
+		 			-	@question.errors.full_message.each do |message|
+		 			li = message
+			p
+				= f.label :title
+				= f.text_field :title 
+			p
+				= f.label :body
+				= f.text_field :body 
+			p
+				= f.label :image
+				= f.file_field :image
+				= f.hidden_field :image_cache
+		
+			h5 Options	
+			.options
+				= f.fields_for :options do |opt|
+					= render 'options_fields', f: opt
+			//= link_to_add_association 'add options', f, :options
+			p	
+				= f.submit
+	
+

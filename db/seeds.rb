@@ -9,3 +9,4 @@
 
 
 # !!!!   NO MATTER HOW THIS FILE MUST BE IDEMPOTENT, IT MIGHT BE RUN ON ANY DEPLOY !!!
+#AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

@@ -20,4 +20,59 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    navigation:
+      home: "Home page"
+      my_session: "My session"
+      log_out: "Log out"
+      log_in: "Log in"
+      sign_up: "Sign in"
+  answers:
+    new:
+      Lets_start: "Let's go!"
+  questions:
+    index:
+      title: "Quizzlighted English"
+      question: "Submit a question"
+      start_quizz: "Start the quizz"
+      number_of_questions: "Number of questions"
+      question: "Submit a new quizz"
+      edit: "Edit"
+      delete: "Delete"
+    new: 
+     Submit_your_question: "Submit a new quizz"
+     hello_flash: "New quizz has submited with succes"
+    show:
+     edit: " Edit "
+     delete: " | Delete "
+     index: " | Back to index"
+    options_show:
+     details_about_this_option: "Details about this question"
+  devise:
+    sessions:
+      new:
+        log_in: "Connection"
+    shared:
+      links:
+        log_in: "Log in"
+        sign_up: "Sign in"
+        forgot_your_password: "Forgot your password? "
+  activerecord:
+    models: 
+      question: Question
+      answer: Answer
+      devise:
+    attributes: 
+      question:
+        title: "Title of question"
+        body: "Content"
+        image: "Choose an image"
+      option:
+        label: "Label"
+        value: "Value"
+      devise:
+        sessions:
+          new:
+            password: "Mot de passe"
+
+
