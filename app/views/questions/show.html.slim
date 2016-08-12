@@ -9,8 +9,8 @@ div class="row"
 				= @oneQuestion.body 
 			p 
 				= render 'options_show'
-			- if current_user && current_user.admin?
-				= link_to t(".edit"), edit_question_path 
-				= link_to t(".delete"), question_path, :method => :delete, data: { confirm: 'Are you sure?' } 
-				= link_to t(".index"), questions_path 
+			//- if current_user && current_user.admin?
+			= link_to t(".edit"), edit_question_path 
+			= link_to t(".delete"), question_path, :method => :delete, data: { confirm: 'Are you sure?' } 
+			= link_to t(".index"), questions_path 
 

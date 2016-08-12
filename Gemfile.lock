@@ -401,7 +401,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   database_cleaner
   devise (~> 4.2)
-  draper (> 3.x)
+  draper (~> 3.0.0.pre1)
   email_spec
   factory_girl_rails
   font-awesome-rails (~> 4.5)

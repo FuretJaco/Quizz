@@ -1,4 +1,5 @@
 class OptionsController < ApplicationController
+	
 	before_action :get_option, only: [:edit, :update, :destroy]
 	def get_option
 		@option = Option.find(params[:id])

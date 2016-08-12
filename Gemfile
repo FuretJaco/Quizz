@@ -10,7 +10,7 @@ gem 'pg', '~> 0.18.4'
 gem 'rails-i18n', '~> 5.0'
 gem 'devise', '~> 4.2'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
-#gem 'draper'
+gem 'draper', '~> 3.0.0.pre1'
 
 
 # Front
@@ -28,7 +28,7 @@ gem 'carrierwave', '~> 0.11.2'
 gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'ransack', github: 'activerecord-hackery/ransack'
-gem 'draper','> 3.x'
+#gem 'draper'
 gem "pundit"
 
 # Misc

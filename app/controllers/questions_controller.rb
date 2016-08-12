@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
-	before_action :get_question, only: [:edit, :update, :destroy]
-	
+	before_action :get_question, only: [:edit, :update, :destroy, :show]
+	after_action :verify_authorized, except: [:index] 
+
 	def get_question
 		@question = Question.find(params[:id])
 	end
@@ -14,13 +15,17 @@ class QuestionsController < ApplicationController
 	end
 
 	def show
-		@oneQuestion = Question.find(params[:id])
-		@options = @oneQuestion.options
+		authorize @question
+		if @oneQuestion = Question.find(params[:id])
+			@options = @oneQuestion.options
+		else 
+			redirect_to root_path 
+		end 
 	end
 	
 	def new
-		if current_user.admin? 
-			@question = Question.new
+		authorize @question
+			if @question = Question.new
 			3.times do 
 				@question.options.build
 			end 
@@ -30,8 +35,8 @@ class QuestionsController < ApplicationController
 	end
 
 	def create
-		if current_user.admin?
-			@question = Question.create!(question_params)
+		authorize @question
+		if @question = Question.create!(question_params)
 			redirect_to question_path(@question), :notice => t(:submit_flash)
 		else
 			redirect_to questions_path, :alert => "You can't do it"
@@ -40,14 +45,14 @@ class QuestionsController < ApplicationController
 	end 
 
 	def edit 
+		authorize @question
+		#3.times do
+			#@question.options.update_attributes(question_params)
+		#end 
 	end 
 
 	def update
-		if current_user.admin? 
-			@question.update_attributes(question_params)
-			3.times do 
-				@question.options.update_attributes
-			end
+		if @question.update_attributes(question_params)
 			redirect_to questions_path(@question) 
 		else
 			redirect_to questions_path, :alert =>  "You can't do it"
@@ -55,11 +60,11 @@ class QuestionsController < ApplicationController
 	end 
 
 	def destroy
-		if current_user.admin? 
-			@question.destroy
-			redirect_to questions_path, :notice => "Quizz is correctly deleted"
-		else 
-			redirect_to questions_path, :alert => "You can't do it"
+		authorize @question
+			if @question.destroy
+				redirect_to questions_path, :notice => "Quizz is correctly deleted"
+			else 
+				redirect_to questions_path, :alert => "You can't do it"
 		end
 	end 
 

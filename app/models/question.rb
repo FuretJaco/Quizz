@@ -6,5 +6,5 @@ class Question < ApplicationRecord
 	validates :title, :body, presence: true
 	validates :title, length: {maximum: 25}
 	
-	accepts_nested_attributes_for :options, allow_destroy: true, reject_if: :all_blank # A la place du all_blanck peut etre methode aussi 
+	accepts_nested_attributes_for :options, allow_destroy: true, reject_if: :all_blank , :update_only => true 
 end

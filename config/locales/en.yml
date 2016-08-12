@@ -20,6 +20,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  pundit:
+    question_policy:
+      show?:
+        default: " You're not authorize for this action!"
+      edit?:
+        default: " For this one, too! "
+      destroy?: 
+        default: " sorry, again! "
   layouts:
     navigation:
       home: "Home page"

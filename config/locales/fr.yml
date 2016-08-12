@@ -1,4 +1,12 @@
 fr:
+  pundit:
+    question_policy:
+      show?:
+        default: " Vous n'êtes pas autorisé pour cette action! "
+      edit?:
+        default: " ça aussi vous ne pouvez pas le faire! "
+      destroy?: 
+        default: " Vous n'êtes pas autorisé pour cette action! "
   layouts:
     navigation:
       home: "Accueil"
