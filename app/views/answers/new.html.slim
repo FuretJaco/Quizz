@@ -1,6 +1,10 @@
 h5 = t('.Lets_start') 
 //p = @answer.errors.full_messages
 div class="row"
+	div class="medium-6 medium-pull-12 columns"
+		//= @answer.count_unanswered_questions
+
+div class="row"
   div class="small-6 large-centered columns"
 		= simple_form_for([@participation, @question, @answer]) do |f|
 			h4 = @question.title

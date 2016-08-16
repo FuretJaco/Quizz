@@ -28,7 +28,6 @@ gem 'carrierwave', '~> 0.11.2'
 gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'ransack', github: 'activerecord-hackery/ransack'
-#gem 'draper'
 gem "pundit"
 
 # Misc

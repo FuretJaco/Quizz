@@ -26,12 +26,13 @@ class AnswersController < ApplicationController
 
 	private 
 
+
 	def answer_params
 		params.require(:answer).permit(:option_id).merge({participation_id: params[:participation_id]})
 	end 
 
 	def fetch_participation
-		@participation = Participation.find(params[:participation_id])
+		@participation =  ParticipationDecorator.decorate Participation.find(params[:participation_id])
 	end 
 
 	def fetch_question

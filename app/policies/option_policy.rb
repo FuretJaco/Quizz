@@ -7,6 +7,6 @@ class OptionPolicy < ApplicationPolicy
 	end 
 
 	def update? 
-		user.admin? 
+		user && user.admin? 
 	end 
 end 

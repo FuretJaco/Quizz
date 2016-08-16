@@ -14,15 +14,16 @@ div class="row"
 	- else
 		div class="small-3 medium-6 large-12 small-centered columns" 
 			= button_to t(".start_quizz"),  participations_path, :method => :post, class: "button expanded"
-ul  
-	- @questions.each do |question|
-		li 
-				= link_to question.title, question_path(question)
-				ol
-					- if policy(question).edit? 
-							= link_to " edit ", edit_question_path(question) 
-							= link_to " delete ", question_path(question), :method => :delete, data: { confirm: 'Are you sure?' }  
-
-
-
-
+  
+- @questions.each do |question|
+	div class="row"
+		div class="medium-6 large-3 columns"
+			div class="callout-card success radius"
+				div class="card-label"
+					div class="label-text" Try it!
+					div class="callout-card-content"
+						h3 class="lead"
+							= link_to question.title, question_path(question)
+							- if policy(question).edit? 
+								= link_to " edit ", edit_question_path(question) 
+								= link_to " delete ", question_path(question), :method => :delete, data: { confirm: 'Are you sure?' } 
