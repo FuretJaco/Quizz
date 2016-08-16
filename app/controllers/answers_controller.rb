@@ -8,8 +8,8 @@ class AnswersController < ApplicationController
 
 	def create
 		fetch_participation
-		@answer = @participation.answers.build(answer_params)
-		if @answer.save 
+		interactor_context = PostAnswer.call(participation: @participation.object, answer_params: answer_params)		
+		if interactor_context.success? 
 			if @participation.unanswered_questions.empty?
 				flash[:notice] = "Nice, you've completed the quizz"
 				redirect_to root_path
@@ -18,6 +18,7 @@ class AnswersController < ApplicationController
 				redirect_to new_participation_question_answer_path(participation_id: @participation, question_id: next_question)
 			end 
 		else
+			@answer = interactor_context.answer
 			@question = Question.find(params[:question_id])
 			render "new"
 		end

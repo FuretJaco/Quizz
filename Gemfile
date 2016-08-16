@@ -12,7 +12,6 @@ gem 'devise', '~> 4.2'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'draper', '~> 3.0.0.pre1'
 
-
 # Front
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -32,6 +31,7 @@ gem "pundit"
 
 # Misc
 gem 'memoist', '~> 0.14.0'
+gem 'interactor'
 
 
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160816073616) do
+ActiveRecord::Schema.define(version: 20160816093647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,10 +66,10 @@ ActiveRecord::Schema.define(version: 20160816073616) do
   end
 
   create_table "participations", force: :cascade do |t|
-    t.string   "user_id"
     t.string   "integer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -101,4 +101,8 @@ ActiveRecord::Schema.define(version: 20160816073616) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "answers", "options"
+  add_foreign_key "answers", "participations"
+  add_foreign_key "options", "questions"
+  add_foreign_key "participations", "users"
 end
