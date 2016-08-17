@@ -15,7 +15,7 @@
  *= require foundation
  *= require frontend
  */
-h1, h2, h4, h5, h6{
+h1, h2, h3, h4, h5, h6{
 	text-align: center;
 	
 }
@@ -90,9 +90,7 @@ input[submit]{
     top: 2px;
     white-space: nowrap;
     transform: rotate(30deg); }
-  h3.lead{
-    padding: -350px;
-  }
+
 
 
 

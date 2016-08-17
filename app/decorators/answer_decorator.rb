@@ -2,16 +2,15 @@ class AnswerDecorator < ApplicationDecorator
 	decorates :answer
 
 	def all_questions
-		all_questions = Question.all
+		Question.all.size
 	end 
 
-	def count_unanswered_questions
-		answered_questions = answers.map { |answer| answer.option.question}
-		all_questions - answered_questions
+	def unanswered_questions_count
+		participation.unanswered_questions.size
 	end
 
-	def count_answered_questions
-		all_questions - count_answered_questions 
+	def answered_questions_count
+
 	end 
 
 end 

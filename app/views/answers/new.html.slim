@@ -2,7 +2,7 @@ h5 = t('.Lets_start')
 //p = @answer.errors.full_messages
 div class="row"
 	div class="medium-6 medium-pull-12 columns"
-		= @participation.count_unanswered_questions
+		= @answer.unanswered_questions_count 
 
 div class="row"
   div class="small-6 large-centered columns"

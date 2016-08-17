@@ -3,7 +3,7 @@ class AnswersController < ApplicationController
 	def new
 		fetch_participation
 		fetch_question
-		@answer = @participation.answers.build
+		@answer = AnswerDecorator.decorate @participation.answers.build
 	end 
 
 	def create
