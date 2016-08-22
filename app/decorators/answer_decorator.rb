@@ -10,7 +10,7 @@ class AnswerDecorator < ApplicationDecorator
 	end
 
 	def answered_questions_count
-
+		all_questions - unanswered_questions_count
 	end 
 
 end 

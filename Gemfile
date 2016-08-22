@@ -28,6 +28,9 @@ gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem "pundit"
+gem 'sidekiq', '~> 4.1', '>= 4.1.4'
+gem "sentry-raven"
+
 
 # Misc
 gem 'memoist', '~> 0.14.0'

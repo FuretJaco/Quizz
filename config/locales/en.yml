@@ -38,6 +38,10 @@ en:
   answers:
     new:
       Lets_start: "Let's go!"
+      question_left_count: "You still have: "
+      to_answer: " questions to answer"
+      question_not_answer_count: "You have answered: "
+      question: "question(s)"
   questions:
     index:
       title: "Quizzlighted English"

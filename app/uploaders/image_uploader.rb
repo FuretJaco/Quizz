@@ -35,6 +35,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   version :thumb do
     process :resize_to_fit => [100, 100]
   end
+
   version :images_quizz do 
     process :resize_to_fill => [800, 430]
   end

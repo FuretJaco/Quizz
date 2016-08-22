@@ -2,7 +2,9 @@ h5 = t('.Lets_start')
 //p = @answer.errors.full_messages
 div class="row"
 	div class="medium-6 medium-pull-12 columns"
-		= @answer.unanswered_questions_count 
+		h5 #{ t('.question_not_answer_count')} #{ @answer.answered_questions_count } #{ t('.question')}
+		h5 #{ t('.question_left_count')} #{ @answer.unanswered_questions_count } #{ t('.to_answer')}
+		
 
 div class="row"
   div class="small-6 large-centered columns"

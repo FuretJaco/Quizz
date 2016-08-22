@@ -23,6 +23,10 @@ fr:
   answers:
     new:
       Lets_start: "C'est parti !"
+      question_left_count: "Il vous reste: "
+      to_answer: " questions à répondre"
+      question_not_answer_count: "Vous avez répondu à: "
+      question: "question(s)"
   questions:
     index:
       title: "Quizzlighted en français"

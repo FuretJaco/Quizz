@@ -78,7 +78,7 @@ input[submit]{
     width: 0px;
     transform: rotate(360deg); }
   .callout-card .callout-card-content {
-    padding: 0.5rem -10.5rem 0.875rem; }
+    padding: 0.5rem -1.5rem 0.875rem; }
   .callout-card.radius {
     border-radius: 0.6rem; }
   .callout-card .label-text {
