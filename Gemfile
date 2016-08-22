@@ -4,6 +4,7 @@ ruby '2.3.1'
 # Core
 gem 'rails', '~> 5.0.0'
 gem 'pg', '~> 0.18.4'
+gem 'rack', github: 'rack/rack'
 
 
 # Rails extensions
@@ -28,7 +29,7 @@ gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem "pundit"
-gem 'sidekiq', '~> 4.1', '>= 4.1.4'
+gem 'sidekiq', '~> 4.1', '>= 4.1.2'
 gem "sentry-raven"
 
 

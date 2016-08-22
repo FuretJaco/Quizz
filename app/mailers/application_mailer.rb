@@ -9,9 +9,9 @@ class ApplicationMailer < ActionMailer::Base
   #   super.reverse_merge(locale: mailer_locale)
   # end
   #
-  # def mailer_locale
-  #   I18n.locale
-  # end
+   def mailer_locale
+     I18n.locale
+   end
 
 
 end
