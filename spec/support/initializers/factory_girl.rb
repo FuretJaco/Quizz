@@ -1,4 +1,4 @@
-require 'faker'
+# require 'faker'
 require 'factory_girl'
 
 module FactoryGirl::SyntaxSugar

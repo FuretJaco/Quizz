@@ -16,7 +16,7 @@ class PostAnswer
 	def send_email_if_finished
 		#close de garde 
 		return unless finished?
-		ParticipationMailer.participation_finished(participation).deliver_later
+		MailWorker.perform_in(1.minutes, participation)
 	end 
 
 	def finished?

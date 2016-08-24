@@ -1,6 +1,6 @@
-class HardWorker
+class MailWorker
   include Sidekiq::Worker
-  def perform(name, count)
-    # do something
+  def perform(participation)
+    ParticipationMailer.participation_finished(participation).deliver
   end
 end

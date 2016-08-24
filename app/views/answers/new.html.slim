@@ -2,8 +2,7 @@ h5 = t('.Lets_start')
 //p = @answer.errors.full_messages
 div class="row"
 	div class="medium-6 medium-pull-12 columns"
-		h5 #{ t('.question_not_answer_count')} #{ @answer.answered_questions_count } #{ t('.question')}
-		h5 #{ t('.question_left_count')} #{ @answer.unanswered_questions_count } #{ t('.to_answer')}
+		h6 #{ t('.question_not_answer_count')} #{ @answer.answered_questions_count } #{ t('.question')} #{ t('.question_left_count')} #{ @answer.unanswered_questions_count } #{ t('.to_answer')}
 		
 
 div class="row"
@@ -15,3 +14,7 @@ div class="row"
 			// f.association va permettre de récup mon model option et ce en récuperant l'id
 			= f.association :option,  collection: @question.options, label_method: :value, value_method: :id, as: :radio_buttons, label: false
 			= f.submit 'Next Quizz ... '
+
+div class="row"
+	div class="small-8 columns"
+		= image_tag("/general/banksy_rat_you_lie.png")

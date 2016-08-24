@@ -39,7 +39,6 @@ end
 RSpec.configure do |config|
 
   config.before(:suite) do
-    if config.respond_to?(:use_transactional_fixtures?) && config.use_transactional_fixtures?
     Strategy.set :transaction
     DatabaseCleaner.clean_with :truncation
     load "db/seeds.rb"
