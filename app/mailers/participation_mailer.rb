@@ -1,7 +1,6 @@
 class ParticipationMailer < ApplicationMailer 
 
-	def participation_finished(participation)
-		@participation = participation
-		mail(to: participation.user.email)
+	def participation_finished(email)
+		mail(to: email)
 	end 
 end 

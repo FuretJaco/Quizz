@@ -17,8 +17,10 @@ Rails.application.routes.draw do
   end
 
   resources :participations, only: [:create] do
-    resources :questions, only: [] do
-      resources :answers, only: [:new, :create]
+    resources :quizzes, only: [] do 
+      resources :questions, only: [] do
+        resources :answers, only: [:new, :create]
+      end 
     end
   end 
   

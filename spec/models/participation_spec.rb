@@ -24,6 +24,7 @@ RSpec.describe Participation, type: :model do
 
   		expect(result).to match_array [question2, question3]
   	end 
+
   	it "return participation is complete when unanswered questions is empty" do
   		question1 = Question.create!(title: "titre 1", body: "body 1")
   		question2 = Question.create!(title: "titre 2", body: "body 2") 
@@ -47,8 +48,9 @@ RSpec.describe Participation, type: :model do
 			question3 = Question.create!(title: "titre 3", body: "body 3") 
 
 			subject = Participation.build!
+			result = subject.unanswered_questions
 
-  		expect().to xxxx
+  		expect(result).to be_new_record 
 
   	end 
   end 

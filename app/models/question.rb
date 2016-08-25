@@ -1,4 +1,5 @@
 class Question < ApplicationRecord
+	belongs_to :quizz
 	has_many :options, inverse_of: :question, dependent: :destroy #inverse_of permet de lier les deux tables avant que la sauvegarde ne soit effective dans la db 
 	# ce qui permettra donc d'obtenir les options qui vont avec les questions avant même que celles ci ne soient enregistrées en db 
 	mount_uploader :image, ImageUploader
