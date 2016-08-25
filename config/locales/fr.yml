@@ -30,6 +30,7 @@ fr:
   quizzes:
     index:
       start_quizz: "Commencez le quizz"
+      submit_new_quizz: "Soumettre un nouveau quizz"
   questions:
     index:
       title: "Quizzlighted en français"
