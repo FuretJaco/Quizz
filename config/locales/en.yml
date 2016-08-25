@@ -42,6 +42,9 @@ en:
       to_answer: " questions to answer"
       question_not_answer_count: "You have answered: "
       question: "question(s)"
+  quizzes:
+    index:
+      start_quizz: "Start the quizz"
   questions:
     index:
       title: "Quizzlighted English"

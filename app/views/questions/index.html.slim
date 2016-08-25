@@ -14,6 +14,7 @@ div class="row"
 	- else
 		div class="small-3 medium-6 large-12 small-centered columns" 
 			= button_to t(".start_quizz"),  participations_path, :method => :post, class: "button expanded"
+			
   
 - @questions.each do |question|
 	div class="row"

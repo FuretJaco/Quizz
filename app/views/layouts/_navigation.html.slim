@@ -6,6 +6,9 @@
           = link_to root_path do
             = t(".home")
         li.title-bar-title 
+          = link_to quizzes_path do 
+            = t(".all_quizz")
+        li.title-bar-title 
           - if user_signed_in? 
               li
                 = link_to user_session_path do

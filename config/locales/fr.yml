@@ -27,6 +27,9 @@ fr:
       to_answer: " questions à répondre"
       question_not_answer_count: "Vous avez répondu à: "
       question: "question(s)"
+  quizzes:
+    index:
+      start_quizz: "Commencez le quizz"
   questions:
     index:
       title: "Quizzlighted en français"
