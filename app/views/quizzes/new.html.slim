@@ -3,10 +3,10 @@ div class="row"
 		h3 = t(".Submit_your_quizz")
 div class="row"
   div class="small-6 large-centered columns"
-  = form_for @quizz, :url quizzes_path do |f|
+  = form_for @quizz, url: quizzes_path do |f|
   	p 
   		= f.label :title 
-  		= f.textfield :title 
+  		= f.text_field :title 
   	h5 Questions
   	.questions
 			= f.fields_for :questions do |ques|

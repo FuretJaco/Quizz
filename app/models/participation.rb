@@ -1,5 +1,6 @@
 class Participation < ApplicationRecord
 	belongs_to :user
+	belongs_to :quizz
 	has_many :answers
 
 	def unanswered_questions
