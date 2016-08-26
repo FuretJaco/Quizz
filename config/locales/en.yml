@@ -49,14 +49,15 @@ en:
   questions:
     index:
       title: "Quizzlighted English"
-      question: "Submit a question"
+      question: " Submit a new question "
+      quizz: " Submit a new quizz "
       start_quizz: "Start the quizz"
       number_of_questions: "Number of questions"
-      question: "Submit a new quizz"
       edit: "Edit"
       delete: "Delete"
     new: 
-     Submit_your_question: "Submit a new quizz"
+     Submit_a_new_quizz: " Submit a new quizz "
+     Submit_your_question: " Submit a new question "
      hello_flash: "New quizz has submited with succes"
     show:
      edit: " Edit "

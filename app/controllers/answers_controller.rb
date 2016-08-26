@@ -2,6 +2,7 @@ class AnswersController < ApplicationController
 	
 	def new
 		fetch_participation
+		fetch_quizz
 		fetch_question
 		@answer = AnswerDecorator.decorate @participation.answers.build
 	end 
@@ -15,10 +16,11 @@ class AnswersController < ApplicationController
 				redirect_to root_path
 			else 
 				next_question = @participation.unanswered_questions.first
-				redirect_to new_participation_question_answer_path(participation_id: @participation, question_id: next_question)
+				redirect_to new_participation_quizz_question_answer_path(participation_id: @participation, question_id: next_question)
 			end 
 		else
 			@answer = interactor_context.answer
+			@quizz = Quizz.find(params[:quizz_id])
 			@question = Question.find(params[:question_id])
 			render "new"
 		end
@@ -34,6 +36,10 @@ class AnswersController < ApplicationController
 
 	def fetch_participation
 		@participation =  ParticipationDecorator.decorate Participation.find(params[:participation_id])
+	end 
+
+	def fetch_quizz
+		@quizz = Quizz.find(params[:quizz_id])
 	end 
 
 	def fetch_question

@@ -2,10 +2,10 @@ h3 Choose your quizz
 
 div class="row"
 	div class="small-3 small-centered columns"
-		= link_to t('.submit_new_quizz'), new_quiz_path
+		= link_to t('.submit_new_quizz'), new_quizz_path
 ul
 	- @quizz.each do |quizz|
 		li 
 			= quizz.title
-			= button_to t(".start_quizz"), participations_path, :method => :post
+			= button_to t(".start_quizz"), participations_path(participation: {quizz_id: quizz.id}), :method => :post
 			

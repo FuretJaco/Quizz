@@ -36,11 +36,13 @@ fr:
       title: "Quizzlighted en français"
       start_quizz: "Commencez le quizz"
       number_of_questions: "Nombre de questions"
-      question: "Soumettre un nouveau quizz"
+      question: "Soumettre une nouvelle question"
+      quizz: "Soumettre un nouveau quizz"
       edit: "Editer"
       delete: "Supprimer"
     new:
      Submit_your_question: "Soumettre une nouvelle question"
+     Submit_a_new_quizz: "Soumettre un nouveau quizz"
      hello_flash: "Nouveau quizz soumis avec succès"
     show:
      edit: " Editer "

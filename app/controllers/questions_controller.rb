@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-	before_action :get_question, only: [:edit, :update, :destroy, :show]
+	before_action :get_question, only: [:create, :edit, :update, :destroy, :show]
 	after_action :verify_authorized, except: [:index] 
 
 	def get_question
@@ -24,24 +24,17 @@ class QuestionsController < ApplicationController
 	end
 	
 	def new
+		@question = Question.new
 		authorize @question
-			if @question = Question.new
-			3.times do 
-				@question.options.build
-			end 
-		else  
-			redirect_to questions_path, :alert => "You can't post a question"
-		end
+		3.times do 
+			@question.options.build
+		end 
 	end
 
 	def create
+		@question = Question.create!(question_params)
 		authorize @question
-		if @question = Question.create!(question_params)
-			redirect_to question_path(@question), :notice => t(:submit_flash)
-		else
-			redirect_to questions_path, :alert => "You can't do it"
-		end 
-		
+		redirect_to question_path(@question), :notice => t(:submit_flash)
 	end 
 
 	def edit 
@@ -60,12 +53,9 @@ class QuestionsController < ApplicationController
 	end 
 
 	def destroy
+		@question.destroy
 		authorize @question
-			if @question.destroy
-				redirect_to questions_path, :notice => "Quizz is correctly deleted"
-			else 
-				redirect_to questions_path, :alert => "You can't do it"
-		end
+		redirect_to questions_path, :notice => "Quizz is correctly deleted"
 	end 
 
 	private 

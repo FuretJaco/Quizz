@@ -7,9 +7,10 @@ div class="row"
   	p 
   		= f.label :title 
   		= f.text_field :title 
-  	h5 Questions
-  	.questions
-			= f.fields_for :questions do |ques|
-				= render 'questions_fields', f: ques
+		.questions
+			= f.fields_for :questions do |quest|
+				= render 'questions_fields', f: quest
+		p	
+		= f.submit
 
 

@@ -7,7 +7,7 @@ class QuizzPolicy < ApplicationPolicy
 	end 
 
 	def show?
-		user.admin? 
+		user && user.admin? 
 	end 
 
 	def new?
@@ -15,7 +15,7 @@ class QuizzPolicy < ApplicationPolicy
 	end 
 
 	def create? 
-		user.admin? 
+		false
 	end
 
 	def update? 
@@ -23,7 +23,7 @@ class QuizzPolicy < ApplicationPolicy
 	end
 
 	def destroy? 
-		user.admin?
+		user && user.admin?
 	end 
 	
 end 

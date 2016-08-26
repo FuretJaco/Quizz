@@ -5,3 +5,7 @@
 		p
 			= f.label :body
 			= f.text_field :body
+.options 
+	= f.fields_for :options do |opt|
+	 = render "options_fields", f: opt
+	 = link_to_add_association 'add options', f, :options

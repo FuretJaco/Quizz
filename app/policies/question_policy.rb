@@ -15,7 +15,7 @@ class QuestionPolicy < ApplicationPolicy
 	end 
 
 	def create? 
-		user.admin? 
+		user && user.admin? 
 	end
 
 	def update? 
@@ -23,6 +23,6 @@ class QuestionPolicy < ApplicationPolicy
 	end
 
 	def destroy? 
-		user.admin?
+		user && user.admin?
 	end 
 end
