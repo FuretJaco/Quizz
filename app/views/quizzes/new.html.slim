@@ -1,6 +1,7 @@
 div class="row"
   div class="small-6 large-centered columns"
 		h3 = t(".Submit_your_quizz")
+
 div class="row"
   div class="small-6 large-centered columns"
   = form_for @quizz, url: quizzes_path do |f|
@@ -9,7 +10,8 @@ div class="row"
   		= f.text_field :title 
 		.questions
 			= f.fields_for :questions do |quest|
-				= render 'questions_fields', f: quest
+				= render 'question_fields', f: quest
+			= link_to_add_association 'Add questions', f, :questions 
 		p	
 		= f.submit
 

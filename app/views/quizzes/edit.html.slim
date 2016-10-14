@@ -1,0 +1,14 @@
+h4 Edit your quizz
+div class="row"
+  div class="small-6 large-centered columns"
+		= form_for @quizz, url: quizz_path, method: :put do |f|
+			p
+				= f.label :title 
+				= f.text_field :title 
+
+				h5 Questions
+				= f.fields_for :options do |opt|
+					= render 'question_edit_fields', f: opt
+				= link_to_add_association 'add options', f, :questions
+			p 
+				= f.submit		

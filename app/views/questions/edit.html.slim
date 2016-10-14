@@ -1,7 +1,7 @@
 h4 Edit your question
 div class="row"
   div class="small-6 large-centered columns"
-		= form_for :question, url: question_path, method: :put do |f| 
+		= form_for @question, url: question_path, method: :put do |f| 
 			p
 				label My Image 
 				= f.file_field :image
@@ -14,6 +14,7 @@ div class="row"
 				= f.text_field :body
 				h5 Options
 				= f.fields_for :options do |opt|
-					= render 'options_fields', f: opt
+					= render 'option_edit_fields', f: opt
+				= link_to_add_association 'add options', f, :options
 			p 
 				= f.submit		

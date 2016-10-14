@@ -6,6 +6,7 @@ div class="row"
 div class="row"
 	div class="small-6 small-centered columns"
 		h5 #{ t('.number_of_questions') } #{ @questions.count }
+		//h5 #{ t('number_of_quizzes') } #{ @quizzes.count }
 
 div class="row"
 	- if policy(Question.new).new?

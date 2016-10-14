@@ -26,9 +26,6 @@ class QuestionsController < ApplicationController
 	def new
 		@question = Question.new
 		authorize @question
-		3.times do 
-			@question.options.build
-		end 
 	end
 
 	def create
@@ -39,9 +36,6 @@ class QuestionsController < ApplicationController
 
 	def edit 
 		authorize @question
-		#3.times do
-			#@question.options.update_attributes(question_params)
-		#end 
 	end 
 
 	def update

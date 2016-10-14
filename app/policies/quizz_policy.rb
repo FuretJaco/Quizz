@@ -15,7 +15,7 @@ class QuizzPolicy < ApplicationPolicy
 	end 
 
 	def create? 
-		false
+		user.admin?
 	end
 
 	def update? 
