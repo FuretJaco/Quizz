@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Quizzighted
 
 This project is a toy project meant to learn the stack of tools we used at Belighted.
@@ -114,3 +115,7 @@ Scope admin panel under `/admin`
 - I18n
 - Pundit
 - routes segmentation
+=======
+# Quizz
+Quizz 
+>>>>>>> b3ef86bdc3ee9a51c37b4ae7d5b13da51f75d647
